@@ -817,18 +817,19 @@ main.post .drop-section li.item.feed a:hover .icon {
 
 				&:hover {
 					.logo {
-						filter: grayscale(100%) brightness(100) opacity(90%);
+						opacity: 0.85;
 					}
 				}
 			}
 
 			.logo {
+				content: url(../data/my-logo.png);
 				display: inline-block;
-				height: 26px;
+				height: 40px;
+				width: auto;
 				vertical-align: top;
 				position: relative;
-				top: 5px;
-				filter: grayscale(100%) brightness(100);
+				top: 3px;
 			}
 		}
 	}
