@@ -1,0 +1,8 @@
+{
+	"name": "Infinigate",
+	"author": "Infinigate",
+	"description": "A FreshRSS theme inspired by the Infinigate brand. Dark navy navigation and sidebar with a clean light content area and orange accents.",
+	"version": 1.0,
+	"files": ["_frss.css", "infinigate.css"],
+	"theme-color": "#1B2D5A"
+}
