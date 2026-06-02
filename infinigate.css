@@ -96,6 +96,7 @@ html,
 body {
 	color: var(--color-text-dark);
 	font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+	margin: 0;
 }
 
 body:not(.normal):not(.reader) nav.configure
@@ -803,14 +804,18 @@ main.post .drop-section li.item.feed a:hover .icon {
 	position: sticky;
 	top: 0;
 	z-index: 96; /* above .nav_menu (90) and .item.configure (95) */
+	background-color: var(--color-background-nav);
 
 	/* Keep config.php-provided logo images from overflowing the layout. */
 	.item.title {
+		background-color: var(--color-background-nav);
+
 		a {
 			display: inline-flex;
 			align-items: center;
 			max-width: calc(var(--width-aside) - 0.75rem);
 			overflow: hidden;
+			color: var(--color-text-light);
 		}
 
 		.logo {
