@@ -1434,11 +1434,6 @@ main.global {
 	}
 }
 
-body:has(.aside:not(.visible)) .header .item.title,
-body.reader .header .item.title {
-	display: none;
-}
-
 /* =========================================================================
    Dropdown toggle active state
    ========================================================================= */
