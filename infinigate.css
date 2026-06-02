@@ -74,6 +74,7 @@
 	--line-height-dropdown:  2.5;
 
 	--width-aside: 231px;
+	--height-header: 42px;
 }
 
 /* Compatibility: CSS Color Module Level 4, Relative Color */
@@ -801,14 +802,15 @@ main.post .drop-section li.item.feed a:hover .icon {
 
 .header {
 	height: auto;
+	min-height: var(--height-header);
 	position: sticky;
 	top: 0;
 	z-index: 96; /* above .nav_menu (90) and .item.configure (95) */
-	background-color: var(--color-background-nav);
+	background-color: var(--color-background-aside);
 
 	/* Keep config.php-provided logo images from overflowing the layout. */
 	.item.title {
-		background-color: var(--color-background-nav);
+		background-color: var(--color-background-aside);
 
 		a {
 			display: inline-flex;
@@ -865,7 +867,11 @@ main.post .drop-section li.item.feed a:hover .icon {
 
 .aside {
 	background-color: var(--color-background-aside);
-	padding-top: 2.5rem;
+	padding-top: 0.5rem;
+	position: sticky;
+	top: var(--height-header);
+	max-height: calc(100vh - var(--height-header));
+	overflow-y: auto;
 
 	&.aside_feed {
 		.tree {
@@ -901,7 +907,7 @@ main.post .drop-section li.item.feed a:hover .icon {
 }
 
 #aside_feed > ul > li:first-child {
-	margin-top: 0.4rem;
+	margin-top: 0;
 }
 
 .aside_feed {
@@ -1023,7 +1029,7 @@ main.post .drop-section li.item.feed a:hover .icon {
 	width: 100%;
 	box-sizing: border-box;
 	font-size: 0;
-	background-color: var(--color-background-nav);
+	background-color: var(--color-background-aside);
 	text-align: left;
 	position: sticky;
 	top: 0;
@@ -1642,6 +1648,10 @@ main.global {
 	}
 
 	.aside {
+		position: static;
+		top: auto;
+		max-height: none;
+		overflow-y: visible;
 		padding: 0;
 		width: 0;
 
