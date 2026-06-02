@@ -807,31 +807,6 @@ main.post .drop-section li.item.feed a:hover .icon {
 	> .item {
 		padding: 0;
 		vertical-align: middle;
-
-		&.title {
-			position: absolute;
-			text-align: center;
-
-			a {
-				padding: 0 1rem;
-
-				&:hover {
-					.logo {
-						opacity: 0.85;
-					}
-				}
-			}
-
-			.logo {
-				content: url(../data/my-logo.png);
-				display: inline-block;
-				height: 40px;
-				width: auto;
-				vertical-align: top;
-				position: relative;
-				top: 3px;
-			}
-		}
 	}
 
 	.item.configure {
@@ -1249,10 +1224,6 @@ main.post .drop-section li.item.feed a:hover .icon {
 body:not(:has(nav#aside_feed)) {
 	#global {
 		height: 0;
-	}
-
-	.logo {
-		right: 30px;
 	}
 
 	.header {
