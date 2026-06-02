@@ -804,6 +804,25 @@ main.post .drop-section li.item.feed a:hover .icon {
 	top: 0;
 	z-index: 96; /* above .nav_menu (90) and .item.configure (95) */
 
+	/* Keep config.php-provided logo images from overflowing the layout. */
+	.item.title {
+		a {
+			display: inline-flex;
+			align-items: center;
+			max-width: calc(var(--width-aside) - 0.75rem);
+			overflow: hidden;
+		}
+
+		.logo {
+			display: block;
+			width: auto;
+			height: auto;
+			max-width: 220px;
+			max-height: 38px;
+			object-fit: contain;
+		}
+	}
+
 	> .item {
 		padding: 0;
 		vertical-align: middle;
@@ -1224,6 +1243,15 @@ main.post .drop-section li.item.feed a:hover .icon {
 body:not(:has(nav#aside_feed)) {
 	#global {
 		height: 0;
+	}
+
+	.logo {
+		display: inline-block;
+		width: auto;
+		height: auto;
+		max-width: min(320px, calc(100vw - 5rem));
+		max-height: 64px;
+		object-fit: contain;
 	}
 
 	.header {
